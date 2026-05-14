@@ -7,7 +7,7 @@ class Car {
 	}
 	getMakeModel() {
 
-		return `${this.make}$ {this.model}`;
+		return `${this.make} ${this.model}`;
 	}
 }
 
@@ -22,6 +22,7 @@ class SportsCar extends Car {
 	  getTopSpeed() {
 
     return this.topSpeed;
+	}
 }
 // Do not change the code below
 window.Car = Car;
