@@ -1,25 +1,28 @@
 
-function Car(make, nodel){
-	this.make = make;
-	this. model = model;
+class Car {
+	constructor(make, model) {
+
+		this.make = make;
+		this. model = model;
+	}
+	getMakeModel() {
+
+		return `${this.make}$ {this.model}`;
+	}
 }
 
-Car.prototype.getMakeModel = function() {
-	
-};
 
+class SportsCar extends Car {
+	constructor(make,model,topSpeed){
 
-function SportsCar(make, model, topSpeed) {
-	Car.call(this, make, model);
-	this.topSpeed = topSpeed;
+		super(make,model);
+
+			this.topSpeed = topSpeed;
+	}
+	  getTopSpeed() {
+
+    return this.topSpeed;
 }
-
-SportsCar.prototype.getTopSpeed = function () {
-	return this.topSpeed;
-};
-
-
-SportsCar.prototype.constructor = SportsCar;
 // Do not change the code below
 window.Car = Car;
 window.SportsCar = SportsCar;
