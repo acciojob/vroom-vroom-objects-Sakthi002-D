@@ -1,31 +1,25 @@
-// Complete the js code
-function Car(make, model) {
+
+function Car(make, nodel){
 	this.make = make;
-  this.model = model;
+	this. model = model;
 }
 
-// method in prototype
-Car.prototype.getMakeModel = function () {
-  return `${this.make} ${this.model}`;
+Car.prototype.getMakeModel = function() {
+	
 };
+
 
 function SportsCar(make, model, topSpeed) {
-	Car.call(this, make, model); // inherit properties
-  this.topSpeed = topSpeed;
+	Car.call(this, make, model);
+	this.topSpeed = topSpeed;
 }
 
-// inheritance setup
-SportsCar.prototype = Object.create(Car.prototype);
-
-// method in SportsCar
 SportsCar.prototype.getTopSpeed = function () {
-  return this.topSpeed;
+	return this.topSpeed;
 };
 
-// (optional but good practice)
+
 SportsCar.prototype.constructor = SportsCar;
-
-
 // Do not change the code below
 window.Car = Car;
 window.SportsCar = SportsCar;
